@@ -76,7 +76,7 @@ botao.grid(column=1, row=7, pady=20)
 
 #TELA 1 ===             ==                     ==                  ==                 ==                 ==                    ==                    ==                    ==                                   
 
-tPrincipal = tk.Frame(root, background='yellow')
+tPrincipal = tk.Frame(root, background='#ffff12')
 tPrincipal.columnconfigure(0, weight=2)
 tPrincipal.columnconfigure(1, weight=1)
 tPrincipal.columnconfigure(2, weight=2)
@@ -87,26 +87,26 @@ tPrincipal.columnconfigure(4, weight=2)
 tPrincipal.grid(column=0, row=0, sticky='nsew')
 
 
-titulo1 = tk.Label(tPrincipal, text="Restaurante do Ederson", font=("Arial", 15, "bold"), anchor="center")
-titulo1.grid(column=1, row=0, sticky="we")
+titulo1 = tk.Label(tPrincipal, text="Restaurante do Ederson", font=("Arial", 30, "bold"), anchor="center", background="yellow")
+titulo1.grid(column=2, row=0, sticky="we", pady=50)
 
-bebidaalcolica = Image.open("balcol.png")
-#bebidaalcolica.thumbnail((300, 300))
+bebidaalcolica = Image.open("imagens\\balcol.png")
+bebidaalcolica.thumbnail((300, 300))
 photo1 = ImageTk.PhotoImage(bebidaalcolica)
 
 label1 = tk.Label(tPrincipal, image=photo1, bg="gray", bd=0)
-label1.grid(column=0, row=1, pady=10)
+label1.grid(column=1, row=1, pady=10)
 
-sobremesa = Image.open("sobremesa2.jpg")
+sobremesa = Image.open("imagens\\sobremesa2.jpg")
 sobremesa.thumbnail((300, 300))
 photo2 = ImageTk.PhotoImage(sobremesa)
 
 oi = ("print")
 label2 = tk.Label(tPrincipal, image=photo2, bg="gray", bd=0)
-label2.grid(column=1, row=1, pady=10)
+label2.grid(column=3, row=1, pady=10)
 
 
-pratoprincipal = Image.open("pratoprincipal2.jpg")
+pratoprincipal = Image.open("imagens\\pratoprincipal2.jpg")
 pratoprincipal.thumbnail((300, 300))
 photo3 = ImageTk.PhotoImage(pratoprincipal)
 
@@ -115,22 +115,31 @@ label3 = tk.Label(tPrincipal, image=photo3, bg="gray", bd=0)
 label3.grid(column=2, row=1, pady=10)
 
 
-petiscos = Image.open("petiscos.jpg")
+petiscos = Image.open("imagens\\petiscos.jpg")
 petiscos.thumbnail((300, 300))
 photo4 = ImageTk.PhotoImage(petiscos)
 
 
 label4 = tk.Label(tPrincipal, image=photo4, bg="gray", bd=0)
-label4.grid(column=2, row=2, pady=150)
+label4.grid(column=3, row=2, pady=150)
 
 
-bebidas = Image.open("bebidas.jpg")
+bebidas = Image.open("imagens\\bebidas.jpg")
 bebidas.thumbnail((300, 300))
 photo5 = ImageTk.PhotoImage(bebidas)
 
 
 label5 = tk.Label(tPrincipal, image=photo5, bg="gray", bd=0)
-label5.grid(column=2, row=3, pady=150)
+label5.grid(column=2, row=2, pady=15)
+
+
+mastercehf = Image.open("imagens\\masterchef.png")
+mastercehf.thumbnail((300, 300))
+photo6 = ImageTk.PhotoImage(mastercehf)
+
+
+label6 = tk.Label(tPrincipal, image=photo6, bg="gray", bd=0)
+label6.grid(column=1, row=2, pady=15)
 
 
 login()
