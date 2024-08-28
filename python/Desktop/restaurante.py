@@ -101,7 +101,7 @@ sobremesa = Image.open("sobremesa2.jpg")
 sobremesa.thumbnail((300, 300))
 photo2 = ImageTk.PhotoImage(sobremesa)
 
-
+oi = ("print")
 label2 = tk.Label(tPrincipal, image=photo2, bg="gray", bd=0)
 label2.grid(column=1, row=1, pady=10)
 
