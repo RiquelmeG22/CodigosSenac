@@ -94,6 +94,17 @@ bebidaalcolica = Image.open("imagens\\balcol.png")
 bebidaalcolica.thumbnail((300, 300))
 photo1 = ImageTk.PhotoImage(bebidaalcolica)
 
+
+
+botalcol = Image.open("imagens\\bentrada.png")
+botalcol1 = ImageTk.PhotoImage(botalcol)
+
+oi = tk.Label(tPrincipal, image=botalcol1, bd=0)
+oi.grid (column=1, row= 3)
+oi.bind('<Button-1>', lambda e: print('Opa'))
+
+
+
 label1 = tk.Label(tPrincipal, image=photo1, bg="gray", bd=0)
 label1.grid(column=1, row=1, pady=10)
 
