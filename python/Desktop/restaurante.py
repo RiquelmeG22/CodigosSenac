@@ -76,7 +76,7 @@ botao.grid(column=1, row=7, pady=20)
 
 #TELA 1 ===             ==                     ==                  ==                 ==                 ==                    ==                    ==                    ==                                   
 
-tPrincipal = tk.Frame(root, background='#ffff12')
+tPrincipal = tk.Frame(root, background='#FFFFFF')
 tPrincipal.columnconfigure(0, weight=2)
 tPrincipal.columnconfigure(1, weight=1)
 tPrincipal.columnconfigure(2, weight=2)
