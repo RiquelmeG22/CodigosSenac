@@ -72,9 +72,9 @@ botao.grid(column=1, row=7, pady=20)
 #TELA PRINCIPAL  ===             ==                     ==                  ==                 ==                 ==                    ==                    ==                    ==                                   
 
 
-tPrincipal = tk.Frame(root, background='#yellow')
+tPrincipal = tk.Frame(root, background='yellow')
 
-tPrincipal = tk.Frame(root, background='#ffff12')
+# tPrincipal = tk.Frame(root, background='#ffff12')
 
 tPrincipal.grid(column=0, row=0, sticky='nsew')
 
@@ -106,7 +106,6 @@ photo2 = ImageTk.PhotoImage(sobremesa)
 label2 = tk.Label(tPrincipal, image=photo2, bg="gray", bd=0)
 label2.place(rely=0.42, relx=0.5, anchor='n')
 
-
 botsobremesa = Image.open("imagens\\bsobremesas.png")
 botsobremesa1 = ImageTk.PhotoImage(botsobremesa)
 botsobremesa = tk.Label(tPrincipal, image=botsobremesa1, bd=0)
@@ -126,7 +125,6 @@ botpratoprincipal1 = ImageTk.PhotoImage(botpratoprincipal)
 botpratoprincipal = tk.Label(tPrincipal, image=botpratoprincipal1, bd=0)
 botpratoprincipal.place(rely=0.63, relx=0.25, anchor='n')
 botpratoprincipal.bind('<Button-1>', lambda e: print('Opa hehe'))
-
 
 ## entradas
 
@@ -170,20 +168,85 @@ botmasterchef = tk.Label(tPrincipal, image=botmasterchef1, bd=0)
 botmasterchef.place(rely=0.63, relx=0.75, anchor='n')
 botmasterchef.bind('<Button-1>', lambda e: print('Opa kkkkkkkkkk'))
 
-
-
 ## TELA 1 ==                    ==                            ==                                 ==                                      ==                                ==
-
 
 tela1 = tk.Frame(root, background='#ffff12')
 tela1.grid(column=0, row=0, sticky='nsew')
 
+titulo2 = tk.Label(tela1, text="Restaurante do Ederson", font=("Arial", 30, "bold"), anchor="center", background="yellow")
+titulo2.place(rely=0.00, relx=0.5, anchor='n')
+
+## coca-cola           ==              ==              ==             ==             ==             ==
+
+cocacola = Image.open("imagens\\bebidas\\CocaCola.png")
+cocacola.thumbnail((300, 300))
+foto1 = ImageTk.PhotoImage(cocacola)
+lab1 = tk.Label(tela1, image=foto1, bg="gray", bd=0)
+lab1.place(rely=0.3, relx=0.5, anchor='s')
+
+# botaococacola = Image.open()
+# botaococacola1 = ImageTk.PhotoImage(botaococacola)
+# botaococacola = tk.Label(tela1, image="", bd=0)
+# botaococacola.place()
+# botaococacola.bind()
 
 
+## aguacoco ==               ==                  ==                   ==               ==            ==
+
+aguacoco = Image.open("imagens\\bebidas\\AguaCoco.png")
+aguacoco.thumbnail((300, 300))
+foto2 = ImageTk.PhotoImage(aguacoco)
+lab2 = tk.Label(tela1, image=foto2, bg="gray", bd=0)
+lab2.place(rely=0.52, relx=0.65, anchor='n')
+
+# botaoaguacoco = Image.open()
+# botaoaguacoco1 = ImageTk.PhotoImage(botaoaguacoco)
+# botaoaguacoco = tk.Label(tela1, image="", bd=0)
+# botaoaguacoco.place()
+# botaoaguacoco.bind()
+
+ ## red-bull ==                    ==                ==                   ==                ==          ==
+
+redbul = Image.open("imagens\\bebidas\\Red Bull.png")
+redbul.thumbnail((300, 300))
+foto3 = ImageTk.PhotoImage(redbul)
+lab3 = tk.Label(tela1, image=foto3, bg="gray", bd=0)
+lab3.place(rely=0.52, relx=0.35, anchor='n')
+
+# botaoaguacoco = Image.open()
+# botaoaguacoco1 = ImageTk.PhotoImage(botaoaguacoco)
+# botaoaguacoco = tk.Label(tela1, image="", bd=0)
+# botaoaguacoco.place()
+# botaoaguacoco.bind()
+
+## suco de goiaba ==         ==                   ==                    ==                    ==
+
+sucogoiaba = Image.open("imagens\\bebidas\\sucogoiaba22.png")
+sucogoiaba.thumbnail((300, 300))
+foto4 = ImageTk.PhotoImage(sucogoiaba)
+lab4 = tk.Label(tela1, image=foto4, bg="gray", bd=0)
+lab4.place(rely=0.3, relx=0.25, anchor='s')
+
+# botaosucogoiaba = Image.open()
+# botaosucogoiaba1 = ImageTk.PhotoImage(botaosucogoiaba)
+# botaosucogoiaba = tk.Label(tela1, image="", bd=0)
+# botaosucogoiaba.place()
+# botaosucogoiaba.bind()
 
 
+# suco de laranja ==         ===                   ==             ==               ==         ==    
 
+sucolaranja = Image.open("imagens\\bebidas\\sucolaranja22.png")
+sucolaranja.thumbnail((300, 300))
+foto5 = ImageTk.PhotoImage(sucolaranja)
+lab5 = tk.Label(tela1, image=foto5, bg="gray", bd=0)
+lab5.place(rely=0.3, relx=0.75, anchor='s')
 
+# botaosucolaranja = Image.open()
+# botaosucolaranja1 = ImageTk.PhotoImage(botaosucogoiaba)
+# botaosucolaranja = tk.Label(tela1, image="", bd=0)
+# botaosucolaranja.place()
+# botaosucolaranja.bind()
 
 
 
