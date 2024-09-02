@@ -13,6 +13,9 @@ def principal():
 def tela():
     tela1.tkraise()
 
+def telatwo():
+    tela2.tkraise()
+
 def validarLogin():
     usuario = usuarioentry.get()
     senha = senhaentry.get()
@@ -88,7 +91,7 @@ bebidaalcolica.thumbnail((300, 300))
 photo1 = ImageTk.PhotoImage(bebidaalcolica)
 label1 = tk.Label(tPrincipal, image=photo1, bg="gray", bd=0)
 label1.place(rely=0.3, relx=0.5, anchor='s')
-#label1.grid(column=1, row=1, pady=10)
+
 
 botalcol = Image.open("imagens\\botbedalcolicas.png")
 botalcol1 = ImageTk.PhotoImage(botalcol)
@@ -138,7 +141,7 @@ botentradas = Image.open("imagens\\bentradas.png")
 botentradas1 = ImageTk.PhotoImage(botentradas)
 botentradas = tk.Label(tPrincipal, image=botentradas1, bd=0)
 botentradas.place(rely=0.32, relx=0.25, anchor='n')
-botentradas.bind('<Button-1>', lambda e: print('Opa kkkkkkkkkk'))
+botentradas.bind('<Button-1>', lambda e: telatwo())
 
 ## bebidas
 
@@ -184,11 +187,11 @@ foto1 = ImageTk.PhotoImage(cocacola)
 lab1 = tk.Label(tela1, image=foto1, bg="gray", bd=0)
 lab1.place(rely=0.3, relx=0.5, anchor='s')
 
-# botaococacola = Image.open()
-# botaococacola1 = ImageTk.PhotoImage(botaococacola)
-# botaococacola = tk.Label(tela1, image="", bd=0)
-# botaococacola.place()
-# botaococacola.bind()
+botaococacola = Image.open("imagens\\bebidas\\botcoca.png")
+botaococacola1 = ImageTk.PhotoImage(botaococacola)
+botaococacola = tk.Label(tela1, image=botaococacola1, bd=0)
+botaococacola.place(rely=0.32, relx=0.5, anchor='n')
+botaococacola.bind('<Button-1>', lambda e: print('Opa'))
 
 
 ## aguacoco ==               ==                  ==                   ==               ==            ==
@@ -199,11 +202,11 @@ foto2 = ImageTk.PhotoImage(aguacoco)
 lab2 = tk.Label(tela1, image=foto2, bg="gray", bd=0)
 lab2.place(rely=0.52, relx=0.65, anchor='n')
 
-# botaoaguacoco = Image.open()
-# botaoaguacoco1 = ImageTk.PhotoImage(botaoaguacoco)
-# botaoaguacoco = tk.Label(tela1, image="", bd=0)
-# botaoaguacoco.place()
-# botaoaguacoco.bind()
+botaoaguacoco = Image.open("imagens\\bebidas\\botaguacoco.png")
+botaoaguacoco1 = ImageTk.PhotoImage(botaoaguacoco)
+botaoaguacoco = tk.Label(tela1, image=botaoaguacoco1, bd=0)
+botaoaguacoco.place(rely=0.81, relx=0.65, anchor="s")
+botaoaguacoco.bind('<Button-1>', lambda e: print('Opa'))
 
  ## red-bull ==                    ==                ==                   ==                ==          ==
 
@@ -213,11 +216,11 @@ foto3 = ImageTk.PhotoImage(redbul)
 lab3 = tk.Label(tela1, image=foto3, bg="gray", bd=0)
 lab3.place(rely=0.52, relx=0.35, anchor='n')
 
-# botaoaguacoco = Image.open()
-# botaoaguacoco1 = ImageTk.PhotoImage(botaoaguacoco)
-# botaoaguacoco = tk.Label(tela1, image="", bd=0)
-# botaoaguacoco.place()
-# botaoaguacoco.bind()
+botaoredbull = Image.open("imagens\\bebidas\\botredbull.png")
+botaoredbull1 = ImageTk.PhotoImage(botaoredbull)
+botaoredbull = tk.Label(tela1, image=botaoredbull1, bd=0)
+botaoredbull.place(rely=0.81, relx=0.35, anchor="s")
+botaoredbull.bind('<Button-1>', lambda e: print('Opa'))
 
 ## suco de goiaba ==         ==                   ==                    ==                    ==
 
@@ -227,11 +230,11 @@ foto4 = ImageTk.PhotoImage(sucogoiaba)
 lab4 = tk.Label(tela1, image=foto4, bg="gray", bd=0)
 lab4.place(rely=0.3, relx=0.25, anchor='s')
 
-# botaosucogoiaba = Image.open()
-# botaosucogoiaba1 = ImageTk.PhotoImage(botaosucogoiaba)
-# botaosucogoiaba = tk.Label(tela1, image="", bd=0)
-# botaosucogoiaba.place()
-# botaosucogoiaba.bind()
+botaosucogoiaba = Image.open("imagens\\bebidas\\botsucogoiaba.png")
+botaosucogoiaba1 = ImageTk.PhotoImage(botaosucogoiaba)
+botaosucogoiaba = tk.Label(tela1, image=botaosucogoiaba1, bd=0)
+botaosucogoiaba.place(rely=0.32, relx=0.25, anchor='n')
+botaosucogoiaba.bind('<Button-1>', lambda e: print('Opa'))
 
 
 # suco de laranja ==         ===                   ==             ==               ==         ==    
@@ -242,12 +245,42 @@ foto5 = ImageTk.PhotoImage(sucolaranja)
 lab5 = tk.Label(tela1, image=foto5, bg="gray", bd=0)
 lab5.place(rely=0.3, relx=0.75, anchor='s')
 
-# botaosucolaranja = Image.open()
-# botaosucolaranja1 = ImageTk.PhotoImage(botaosucogoiaba)
-# botaosucolaranja = tk.Label(tela1, image="", bd=0)
-# botaosucolaranja.place()
-# botaosucolaranja.bind()
+botaosucolaranja = Image.open("imagens\\bebidas\\botsucolaranja.png")
+botaosucolaranja1 = ImageTk.PhotoImage(botaosucolaranja)
+botaosucolaranja = tk.Label(tela1, image=botaosucolaranja1, bd=0)
+botaosucolaranja.place(rely=0.32, relx=0.75, anchor='n')
+botaosucolaranja.bind('<Button-1>', lambda e: print('Opa'))
 
+
+
+
+### TELA 2           ======                      ==                     ==                   ==           ==
+
+
+
+tela2 = tk.Frame(root, background='yellow')
+
+# tPrincipal = tk.Frame(root, background='#ffff12')
+
+tela2.grid(column=0, row=0, sticky='nsew')
+
+titulotela2 = tk.Label(tela2, text="Restaurante do Ederson", font=("Arial", 30, "bold"), anchor="center", background="yellow")
+titulotela2.place(rely=0.00, relx=0.5, anchor='n')
+
+## PÃO AUSTRALIANO ==              ==                ==                 ==               == 
+
+
+pao = Image.open("imagens\\bebidas\\entradas\\paoutback.png")
+pao.thumbnail((300, 300))
+fot1 = ImageTk.PhotoImage(pao)
+labeel1 = tk.Label(tela1, image=fot1, bg="gray", bd=0)
+labeel1.place(rely=0.3, relx=0.75, anchor='s')
+
+botaopao = Image.open("imagens\\bebidas\\entradas\\botpao.png")
+botaopao1 = ImageTk.PhotoImage(botaopao)
+botaopao = tk.Label(tela1, image=botaopao1, bd=0)
+botaopao.place(rely=0.32, relx=0.75, anchor='n')
+botaopao.bind('<Button-1>', lambda e: print('Opa'))
 
 
 login()
