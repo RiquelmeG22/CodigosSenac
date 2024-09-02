@@ -14,7 +14,7 @@ def tela():
     tela1.tkraise()
 
 def telatwo():
-    tela2.tkraise()
+    tela.tkraise()
 
 def validarLogin():
     usuario = usuarioentry.get()
@@ -258,14 +258,14 @@ botaosucolaranja.bind('<Button-1>', lambda e: print('Opa'))
 
 
 
-tela2 = tk.Frame(root, background='yellow')
+tela = tk.Frame(root, background='yellow')
 
 # tPrincipal = tk.Frame(root, background='#ffff12')
 
-tela2.grid(column=0, row=0, sticky='nsew')
+tela.grid(column=0, row=0, sticky='nsew')
 
-titulotela2 = tk.Label(tela2, text="Restaurante do Ederson", font=("Arial", 30, "bold"), anchor="center", background="yellow")
-titulotela2.place(rely=0.00, relx=0.5, anchor='n')
+titulotela = tk.Label(tela, text="Restaurante do Ederson", font=("Arial", 30, "bold"), anchor="center", background="yellow")
+titulotela.place(rely=0.00, relx=0.5, anchor='n')
 
 ## PÃO AUSTRALIANO ==              ==                ==                 ==               == 
 
@@ -273,14 +273,50 @@ titulotela2.place(rely=0.00, relx=0.5, anchor='n')
 pao = Image.open("imagens\\bebidas\\entradas\\paoutback.png")
 pao.thumbnail((300, 300))
 fot1 = ImageTk.PhotoImage(pao)
-labeel1 = tk.Label(tela1, image=fot1, bg="gray", bd=0)
-labeel1.place(rely=0.3, relx=0.75, anchor='s')
+label_pao = tk.Label(tela, image=fot1, bg="gray", bd=0)
+label_pao.place(rely=0.3, relx=0.75, anchor='s')
 
 botaopao = Image.open("imagens\\bebidas\\entradas\\botpao.png")
 botaopao1 = ImageTk.PhotoImage(botaopao)
-botaopao = tk.Label(tela1, image=botaopao1, bd=0)
+botaopao = tk.Label(tela, image=botaopao1, bd=0)
 botaopao.place(rely=0.32, relx=0.75, anchor='n')
 botaopao.bind('<Button-1>', lambda e: print('Opa'))
+
+## ALHEIRA
+
+alheira = Image.open("imagens\\bebidas\\entradas\\alheira.png")
+alheira.thumbnail((300, 300))
+fotoalheira = ImageTk.PhotoImage(alheira)
+label_alheira = tk.Label(tela, image=fotoalheira, bg="gray", bd=0)
+label_alheira.place(rely=0.3, relx=0.5, anchor='s')
+
+botaoalheira = Image.open("imagens\\bebidas\\entradas\\botalheira.png")
+botaoalheira1 = ImageTk.PhotoImage(botaoalheira)
+botaoalheira = tk.Label(tela, image=botaoalheira1, bd=0)
+botaoalheira.place(rely=0.40, relx=0.5, anchor='s')
+botaoalheira.bind('<Button-1>', lambda e: print('Opa'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 login()
