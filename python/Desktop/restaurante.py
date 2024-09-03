@@ -22,6 +22,12 @@ def telathree():
 def telafour():
     telat4.tkraise()
 
+def telafive():
+    telat5.tkraise()
+
+def telasix():
+    telat6.tkraise()
+
 def validarLogin():
     usuario = usuarioentry.get()
     senha = senhaentry.get()
@@ -119,7 +125,7 @@ botsobremesa = Image.open("imagens\\bsobremesas.png")
 botsobremesa1 = ImageTk.PhotoImage(botsobremesa)
 botsobremesa = tk.Label(tPrincipal, image=botsobremesa1, bd=0)
 botsobremesa.place(rely=0.63, relx=0.5, anchor='n')
-botsobremesa.bind('<Button-1>', lambda e: print('Opa hehe'))
+botsobremesa.bind('<Button-1>', lambda e: telafive())
 
 ## pratos principais
 
@@ -133,7 +139,7 @@ botpratoprincipal = Image.open("imagens\\bpratoprincipais.png")
 botpratoprincipal1 = ImageTk.PhotoImage(botpratoprincipal)
 botpratoprincipal = tk.Label(tPrincipal, image=botpratoprincipal1, bd=0)
 botpratoprincipal.place(rely=0.63, relx=0.25, anchor='n')
-botpratoprincipal.bind('<Button-1>', lambda e: print('Opa hehe'))
+botpratoprincipal.bind('<Button-1>', lambda e: telafour())
 
 ## entradas
 
@@ -175,7 +181,7 @@ botmasterchef = Image.open("imagens\\botaomenuchef.png")
 botmasterchef1 = ImageTk.PhotoImage(botmasterchef)
 botmasterchef = tk.Label(tPrincipal, image=botmasterchef1, bd=0)
 botmasterchef.place(rely=0.63, relx=0.75, anchor='n')
-botmasterchef.bind('<Button-1>', lambda e: print('Opa kkkkkkkkkk'))
+botmasterchef.bind('<Button-1>', lambda e: telasix())
 
 ## TELA 1 ==                    ==                            ==                                 ==                                      ==                                ==
 
@@ -440,28 +446,259 @@ telat4.grid(column=0, row=0, sticky='nsew')
 titulot4 = tk.Label(telat4, text="Restaurante do Ederson", font=("Arial", 30, "bold"), anchor="center", background="yellow")
 titulot4.place(rely=0.00, relx=0.5, anchor='n')
 
+## lasanha ==             ==                   ==                 ==      
+
+
+lasanha = Image.open("pratosprincipais\\lasanha.png")
+lasanha.thumbnail((300, 300))
+fotolasanha = ImageTk.PhotoImage(lasanha)
+label_lasanha = tk.Label(telat4, image=fotolasanha, bg="gray", bd=0)
+label_lasanha.place(rely=0.57, relx=0.65, anchor='n')
+
+botaolasanha = Image.open("pratosprincipais\\botaolasanha (1).png")
+botaolasanha1 = ImageTk.PhotoImage(botaolasanha)
+botaolasanha = tk.Label(telat4, image=botaolasanha1, bd=0)
+botaolasanha.place(rely=0.68, relx=0.65, anchor="n")
+botaolasanha.bind('<Button-1>', lambda e: print('Opa'))
+
+
+## feijoada ==             ==              ==          ==                  ==    
+
+feijoada = Image.open("pratosprincipais\\feijoada.png")
+feijoada.thumbnail((300, 300))
+fotofeijoada = ImageTk.PhotoImage(feijoada)
+label_feijoada = tk.Label(telat4, image=fotofeijoada, bg="gray", bd=0)
+label_feijoada.place(rely=0.57, relx=0.35, anchor='n')
+
+botaofeijoada = Image.open("pratosprincipais\\botaofeijoada (1).png")
+botaofeijoada1 = ImageTk.PhotoImage(botaofeijoada)
+botaofeijoada = tk.Label(telat4, image=botaofeijoada1, bd=0)
+botaofeijoada.place(rely=0.69, relx=0.35, anchor="n")
+botaofeijoada.bind('<Button-1>', lambda e: print('Opa'))
 
 
 
+## camarao ==                ==                ==                ==         ==   
+
+
+camarao = Image.open("pratosprincipais\\camarao.png")
+camarao.thumbnail((300, 300))
+fotocamarao = ImageTk.PhotoImage(camarao)
+label_camarao = tk.Label(telat4, image=fotocamarao, bg="gray", bd=0)
+label_camarao.place(rely=0.3, relx=0.25, anchor='s')
+
+botaocamarao = Image.open("pratosprincipais\\botaocamarao (1).png")
+botaocamarao1 = ImageTk.PhotoImage(botaocamarao)
+botaocamarao = tk.Label(telat4, image=botaocamarao1, bd=0)
+botaocamarao.place(rely=0.40, relx=0.25, anchor='s')
+botaocamarao.bind('<Button-1>', lambda e: print('Opa'))
 
 
 
+##  peixe frito ==                          = ====                           ==             ==  == 
+
+peixefrito = Image.open("pratosprincipais\\peixefrito.png")
+peixefrito.thumbnail((300, 300))
+fotopeixefrito = ImageTk.PhotoImage(peixefrito)
+label_peixefrito = tk.Label(telat4, image=fotopeixefrito, bg="gray", bd=0)
+label_peixefrito.place(rely=0.3, relx=0.5, anchor='s')
+
+botaopeixefrito = Image.open("pratosprincipais\\botaopeixefrito (1).png")
+botaopeixefrito1 = ImageTk.PhotoImage(botaopeixefrito)
+botaopeixefrito = tk.Label(telat4, image=botaopeixefrito1, bd=0)
+botaopeixefrito.place(rely=0.40, relx=0.5, anchor='s')
+botaopeixefrito.bind('<Button-1>', lambda e: print('Opa'))
+
+
+## peixe assado           ==                      ==                          ==                     == 
+
+peixeassado = Image.open("pratosprincipais\\peixeassado.png")
+peixeassado.thumbnail((300, 300))
+fotopeixeassado = ImageTk.PhotoImage(peixeassado)
+label_peixeassado = tk.Label(telat4, image=fotopeixeassado, bg="gray", bd=0)
+label_peixeassado.place(rely=0.3, relx=0.75, anchor='s')
+
+botaopeixeassado = Image.open("pratosprincipais\\botaopeixeassado.png")
+botaopeixeassado1 = ImageTk.PhotoImage(botaopeixeassado)
+botaopeixeassado = tk.Label(telat4, image=botaopeixeassado1, bd=0)
+botaopeixeassado.place(rely=0.40, relx=0.75, anchor='s')
+botaopeixeassado.bind('<Button-1>', lambda e: print('Opa'))
 
 
 
+## TELA 5  ==              ==                  == 
+
+
+telat5 = tk.Frame(root, background='#ffff12')
+telat5.grid(column=0, row=0, sticky='nsew')
+
+titulot5 = tk.Label(telat5, text="Restaurante do Ederson", font=("Arial", 30, "bold"), anchor="center", background="yellow")
+titulot5.place(rely=0.00, relx=0.5, anchor='n')
+
+
+## bolo de chocolate =              ==                    ==              ==              ==      
+
+
+bolochocolate = Image.open("sobremesas\\bolochocolate.png")
+bolochocolate.thumbnail((300, 300))
+fotobolochocolate = ImageTk.PhotoImage(bolochocolate)
+label_bolochocolate = tk.Label(telat5, image=fotobolochocolate, bg="gray", bd=0)
+label_bolochocolate.place(rely=0.3, relx=0.75, anchor='s')
+
+botaobolochocolate = Image.open("sobremesas\\botbolochocolate.png")
+botaobolochocolate1 = ImageTk.PhotoImage(botaobolochocolate)
+botaobolochocolate = tk.Label(telat5, image=botaobolochocolate1, bd=0)
+botaobolochocolate.place(rely=0.37, relx=0.75, anchor='s')
+botaobolochocolate.bind('<Button-1>', lambda e: print('Opa'))
+
+
+## pudim ==             ==                     ==             == 
+
+
+pudim = Image.open("sobremesas\\pudim.png")
+pudim.thumbnail((300, 300))
+fotopudim = ImageTk.PhotoImage(pudim)
+label_pudim = tk.Label(telat5, image=fotopudim, bg="gray", bd=0)
+label_pudim.place(rely=0.3, relx=0.5, anchor='s')
+
+botaopudim = Image.open("sobremesas\\botaopudim.png")
+botaopudim1 = ImageTk.PhotoImage(botaopudim)
+botaopudim = tk.Label(telat5, image=botaopudim1, bd=0)
+botaopudim.place(rely=0.37, relx=0.5, anchor='s')
+botaopudim.bind('<Button-1>', lambda e: print('Opa'))
+
+
+## torta de limão ==           ==             ==   
+
+tortalimao = Image.open("sobremesas\\tortalimao.png")
+tortalimao.thumbnail((300, 300))
+fototortalimao = ImageTk.PhotoImage(tortalimao)
+label_tortalimao = tk.Label(telat5, image=fototortalimao, bg="gray", bd=0)
+label_tortalimao.place(rely=0.3, relx=0.25, anchor='s')
+
+botaotortalimao = Image.open("sobremesas\\botaotortalimao.png")
+botaotortalimao1 = ImageTk.PhotoImage(botaotortalimao)
+botaotortalimao = tk.Label(telat5, image=botaotortalimao1, bd=0)
+botaotortalimao.place(rely=0.37, relx=0.25, anchor='s')
+botaotortalimao.bind('<Button-1>', lambda e: print('Opa'))
+
+
+##  PAVE ==             ==               ==               ==  
+
+pave = Image.open("sobremesas\\pave.png")
+pave.thumbnail((300, 300))
+fotopave = ImageTk.PhotoImage(pave)
+label_pave = tk.Label(telat5, image=fotopave, bg="gray", bd=0)
+label_pave.place(rely=0.57, relx=0.35, anchor='n')
+
+botaopave = Image.open("sobremesas\\botaopave.png")
+botaopave1 = ImageTk.PhotoImage(botaopave)
+botaopave = tk.Label(telat5, image=botaopave1, bd=0)
+botaopave.place(rely=0.71, relx=0.35, anchor="n")
+botaopave.bind('<Button-1>', lambda e: print('Opa'))
+
+## MOUSE DE MARACUJÁ ==             ==                  = =                      ==             ==
+
+
+mousemaracuja = Image.open("sobremesas\\moussemaracuja.png")
+mousemaracuja.thumbnail((300, 300))
+fotomousemaracuja = ImageTk.PhotoImage(mousemaracuja)
+label_mousemaracuja = tk.Label(telat5, image=fotomousemaracuja, bg="gray", bd=0)
+label_mousemaracuja.place(rely=0.57, relx=0.65, anchor='n')
+
+botaomousemaracuja = Image.open("sobremesas\\botaomoussemaracuja.png")
+botaomousemaracuja1 = ImageTk.PhotoImage(botaomousemaracuja)
+botaomousemaracuja = tk.Label(telat5, image=botaomousemaracuja1, bd=0)
+botaomousemaracuja.place(rely=0.71, relx=0.65, anchor="n")
+botaomousemaracuja.bind('<Button-1>', lambda e: print('Opa'))
 
 
 
+## TELA 6  ==         = =                          ==                  == 
+
+
+telat6 = tk.Frame(root, background='#ffff12')
+telat6.grid(column=0, row=0, sticky='nsew')
+
+titulot6 = tk.Label(telat6, text="Restaurante do Ederson", font=("Arial", 30, "bold"), anchor="center", background="yellow")
+titulot6.place(rely=0.00, relx=0.5, anchor='n')
+
+
+## salmao ==         ==              ==        
+
+salmao = Image.open("menuchef\\salmao.png")
+salmao.thumbnail((300, 300))
+fotosalmao = ImageTk.PhotoImage(salmao)
+label_salmao = tk.Label(telat6, image=fotosalmao, bg="gray", bd=0)
+label_salmao.place(rely=0.57, relx=0.65, anchor='n')
+
+botaosalmao = Image.open("menuchef\\botaosalmao.png")
+botaosalmao1 = ImageTk.PhotoImage(botaosalmao)
+botaosalmao = tk.Label(telat6, image=botaosalmao1, bd=0)
+botaosalmao.place(rely=0.69, relx=0.65, anchor="n")
+botaosalmao.bind('<Button-1>', lambda e: print('Opa'))
+
+
+## FRANGO GRELHADO ==             ==                 == 
+
+frangogrelhado = Image.open("menuchef\\frangogrelhado.png")
+frangogrelhado.thumbnail((300, 300))
+fotofrangogrelhado = ImageTk.PhotoImage(frangogrelhado)
+label_frangogrelhado = tk.Label(telat6, image=fotofrangogrelhado, bg="gray", bd=0)
+label_frangogrelhado.place(rely=0.57, relx=0.35, anchor='n')
+
+frangogrelhado = Image.open("menuchef\\botaofrangogrelhado.png")
+frangogrelhado1 = ImageTk.PhotoImage(frangogrelhado)
+frangogrelhado = tk.Label(telat6, image=frangogrelhado1, bd=0)
+frangogrelhado.place(rely=0.72, relx=0.35, anchor="n")
+frangogrelhado.bind('<Button-1>', lambda e: print('Opa'))
+
+
+# ## FRANGO ASSADO ==        ==           ==            ==           ==  
+
+frangoassado = Image.open("menuchef\\frangoassado.png")
+frangoassado.thumbnail((300, 300))
+fotofrangoassado = ImageTk.PhotoImage(frangoassado)
+label_frangoassado = tk.Label(telat6, image=fotofrangoassado, bg="gray", bd=0)
+label_frangoassado.place(rely=0.3, relx=0.25, anchor='s')
+
+frangoassado = Image.open("menuchef\\botaofrangoassado.png")
+frangoassado1 = ImageTk.PhotoImage(frangoassado)
+frangoassado = tk.Label(telat6, image=frangoassado1, bd=0)
+frangoassado.place(rely=0.37, relx=0.25, anchor='s')
+frangoassado.bind('<Button-1>', lambda e: print('Opa'))
+
+
+# ## Costela Suína ==          == ====                               == 
+
+
+costelasuina = Image.open("menuchef\\costelasuina.png")
+costelasuina.thumbnail((300, 300))
+fotocostelasuina = ImageTk.PhotoImage(costelasuina)
+label_costelasuina = tk.Label(telat6, image=fotocostelasuina, bg="gray", bd=0)
+label_costelasuina.place(rely=0.3, relx=0.5, anchor='s')
+
+costelasuina = Image.open("menuchef\\botaocostelasuina.png")
+costelasuina1 = ImageTk.PhotoImage(costelasuina)
+costelasuina = tk.Label(telat6, image=costelasuina1, bd=0)
+costelasuina.place(rely=0.37, relx=0.5, anchor='s')
+costelasuina.bind('<Button-1>', lambda e: print('Opa'))
 
 
 
+# ## BIFE A PARMEDIANA == = = == =             ==  
 
+bifeparmediana = Image.open("menuchef\\bifeaparmegiana.png")
+bifeparmediana.thumbnail((300, 300))
+fotobifeparmediana = ImageTk.PhotoImage(bifeparmediana)
+label_bifeparmediana = tk.Label(telat6, image=fotobifeparmediana, bg="gray", bd=0)
+label_bifeparmediana.place(rely=0.3, relx=0.75, anchor='s')
 
-
-
-
-
-
+bifeparmediana = Image.open("menuchef\\botaobifeparmediana.png")
+bifeparmediana1 = ImageTk.PhotoImage(bifeparmediana)
+bifeparmediana = tk.Label(telat6, image=bifeparmediana1, bd=0)
+bifeparmediana.place(rely=0.37, relx=0.75, anchor='s')
+bifeparmediana.bind('<Button-1>', lambda e: print('Opa'))
 
 
 login()
