@@ -27,10 +27,10 @@ def evaluate():
 root = tk.Tk()
 root.title("Calculadora")
 
-# root.columnconfigure(0, weight=1)
-# root.columnconfigure(1, weight=1)
-# root.columnconfigure(2, weight=1)
-# root.columnconfigure(3, weight=1)
+root.columnconfigure(0, weight=1)
+root.columnconfigure(1, weight=1)
+root.columnconfigure(2, weight=1)
+root.columnconfigure(3, weight=1)
 expression = ""
 label_text = tk.StringVar()
 label_text.set(expression)
