@@ -4,7 +4,7 @@ def calculadora(operation):
     global expression
 
     if operation == "C":
-        expression == ""
+        expression = ""
     elif operation == "B":
         expression = expression [: -1]
     else:
