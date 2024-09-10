@@ -31,10 +31,10 @@ fax varchar(20),
 cpf char(11) unique,
 insc_suframa varchar(20) unique,
 data_nascm date,
-mod_frete enum('', '', ''),
-st_de_cadastro enum ('', ''),
+mod_frete enum('1', '2', '3'),
+st_de_cadastro enum ('1', '2'),
 rg varchar(15) unique,
-linha_do_perfil text ('', '')
+linha_do_perfil text
 );
 
 create table sexo (
@@ -70,7 +70,7 @@ idcomunicacao int primary key auto_increment,
 tipocontato varchar(50),
 valor varchar(100), 
 descricao text,
-rede social varchar(50)
+rede_social varchar(50)
 );
 
 create table vendedor (
@@ -86,5 +86,10 @@ idfananceiro int primary key auto_increment,
 tipo_transacao varchar(50),
 categoria varchar(50),
 descricao text,
-data_transicao date,
+data_transicao date
 );
+
+select * from cadcligeral;
+alter table cadcligeral add idSexo int;
+alter table cadcligeral add constraint fk_sexo foreign key (idSexo) references sexo(idSexo);
+describe cadcligeral;
