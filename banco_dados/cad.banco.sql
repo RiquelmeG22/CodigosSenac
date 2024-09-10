@@ -39,9 +39,7 @@ linha_do_perfil text ('', '')
 
 create table sexo (
 IdSexo int primary key auto_increment,
-masculino char(1),
-feminino char(2),
-nao_se_aplica (3)
+tipo varcahr(20)
 );
 
 
