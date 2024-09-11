@@ -1,6 +1,7 @@
 create database cadbanco;
 use cadbanco;
 
+
 create table cadcli (
 id_cadcli int primary key auto_increment,
 nome varchar(70),
@@ -12,6 +13,7 @@ quem_indicou varchar(70)
 
 create table cadcligeral (
 id_cadcligeral int primary key auto_increment,
+id_cadcli int,
 aliquota float,
 tabela_preco float,
 transportadora1 varchar(40),
@@ -20,76 +22,51 @@ regime_de_tributacao enum ('pj', 'pf'),
 nome varchar(70),
 situacao_do_icms int,
 insc_estadual varchar(14),
-email varchar(50) unique,
-email_danfe varchar(50) unique,
-email_de_cobranca varchar(50) unique, 
-email_loja_virual varchar(50) unique,
-telefone_comercial varchar(20) unique,
+email varchar(50),
+email_danfe varchar(50),
+email_de_cobranca varchar(50) , 
+email_loja_virual varchar(50) ,
+telefone_comercial varchar(20) ,
 ramal varchar(20),
 tel_celular varchar(20) unique,
 fax varchar(20),
 cpf char(11) unique,
 insc_suframa varchar(20) unique,
 data_nascm date,
-mod_frete enum('1', '2', '3'),
-st_de_cadastro enum ('1', '2'),
+mod_frete varchar(20),
+st_de_cadastro varchar(50),
 rg varchar(15) unique,
-linha_do_perfil text
-);
-
-create table sexo (
-idSexo int primary key auto_increment,
-tipo varchar(20)
-);
-
-
-create table transportadora (
-idTransp int primary key auto_increment,
-nome varchar(50)
-);
-
-create table endereco (
-idEndereco int primary key auto_increment,
+linha_do_perfil text,
 rua varchar(50),
-cep varchar(8),
+cep varchar(10),
 bairro varchar(40),
 cidade varchar(40),
-numero int
-);
-
-create table perfil (
-idPerfil int primary key auto_increment,
-nome varchar(70),
-telefone varchar(20) unique,
-email varchar(50) unique,
-dataNasc date
-);
-
-create table comunicacao (
-idcomunicacao int primary key auto_increment,
-tipocontato varchar(50),
-valor varchar(100), 
+numero int,
+dataNasc date,
+titulo_eleitoral varchar(12) not null,
+nivel_de_acesso int,
+rede_social varchar(50),
+telefone varchar(20),
+idsexo int,
+tipo_contato varchar(50),
+valor varchar(100),
 descricao text,
-rede_social varchar(50)
-);
-
-create table vendedor (
-idvendedor int primary key auto_increment,
-nome varchar(70),
-datanasc date,
-email varchar(50) unique,
-salario decimal (10, 2)
-);
-
-create table financeiro (
-idfananceiro int primary key auto_increment,
+transportadora1 varchar(70),
+transportadora2 varchar(70),
 tipo_transacao varchar(50),
+comissao decimal,
+raca varchar(30),
 categoria varchar(50),
-descricao text,
-data_transicao date
+datacontracao date,
+salario decimal,
+data_contracao date,
+data_transicao date,
+limete_credito decimal,
+cnpj varchar(17) unique,
+comida_favorita varchar(100),
+foto_perfil varchar(100),
+gosto_musical varchar(100),
+cor_favorita varchar(100)
 );
 
-select * from cadcligeral;
-alter table cadcligeral add idSexo int;
-alter table cadcligeral add constraint fk_sexo foreign key (idSexo) references sexo(idSexo);
-describe cadcligeral;
+
