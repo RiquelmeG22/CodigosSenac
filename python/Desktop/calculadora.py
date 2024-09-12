@@ -41,11 +41,12 @@ label = tk.Label(root, textvariable=label_text, font=('Arial', 30), bg='white')
 label.grid(row=0, column=0, columnspan=4, sticky='we')
 
 botao = [
+    
     ('7', 1, 0), ('8', 1, 1), ('9', 1, 2), ('C', 1, 3),
     ('4', 2, 0), ('5', 2, 1), ('6', 2, 2), ('+', 2, 3),
     ('1', 3, 0), ('2', 3, 1), ('3', 3, 2), ('-', 3, 3),
     ('0', 4, 0), ('.', 4, 1), ('B', 4, 2), ('*', 4, 3),
-    ('/', 5, 0)
+    ('/', 5, 0), ('π', 5, 1), ('%', 5, 2), ('x²', 5, 3)
 
   
 ]
@@ -56,6 +57,6 @@ for text, row, col in botao:
     button.grid(row=row, column=col, sticky='we')
 
 button = tk.Button(root, text='=', command=evaluate, font=('Arial', 15))
-button.grid(row=6, column=1, columnspan=2, sticky='we')
+button.grid(row=6, column=2, columnspan=2, sticky='we')
 
 root.mainloop()
