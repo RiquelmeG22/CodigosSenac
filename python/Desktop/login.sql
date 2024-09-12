@@ -12,6 +12,6 @@ texto text
 
 
 insert into cadastro (Idcadastro, usuario, senha, texto) values
-('1', 'Riq10', 'Senha231', 'GG');
+('1', 'rique', 'senha', 'GG');
 
 select * from cadastro;
