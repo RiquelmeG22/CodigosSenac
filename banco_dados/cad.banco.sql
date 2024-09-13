@@ -11,6 +11,30 @@ cpf char(11) unique,
 quem_indicou varchar(70)
 );
 
+create table notafiscal (
+    idnotafiscal INT AUTO_INCREMENT PRIMARY KEY,
+    sequencia INT NOT NULL,
+    emissao DATE NOT NULL,
+    vencimento DATE NOT NULL,
+    previsao_faturamento DATE,
+    aprovacao_cliente BOOLEAN,
+    hora_aprovacao TIME,
+    embarques INT,
+    prazo_entrega INT, -- Prazo de entrega em dias
+    n_pedido_compras VARCHAR(50),
+    vendedor VARCHAR(100),
+    historico TEXT,
+    faturamento DECIMAL(10, 2),
+    docto VARCHAR(50),
+    idcadcligeral int
+);
+
+create table sexo (
+idsexo int primary key auto_increment,
+tipo varchar(30)
+);
+
+
 create table cadcligeral (
 id_cadcligeral int primary key auto_increment,
 id_cadcli int,
@@ -51,8 +75,6 @@ idsexo int,
 tipo_contato varchar(50),
 valor varchar(100),
 descricao text,
-transportadora1 varchar(70),
-transportadora2 varchar(70),
 tipo_transacao varchar(50),
 comissao decimal,
 raca varchar(30),
@@ -61,34 +83,16 @@ datacontracao date,
 salario decimal,
 data_contracao date,
 data_transicao date,
-limete_credito decimal,
+limite_credito decimal,
 cnpj varchar(17) unique,
 comida_favorita varchar(100),
 foto_perfil varchar(100),
 gosto_musical varchar(100),
-cor_favorita varchar(100)
-);
-
-create table sexo (
-idsexo int primary key auto_increment,
-tipo varchar(30)
-);
-
-create table notafiscal (
-    idnotafiscal INT AUTO_INCREMENT PRIMARY KEY,
-    sequencia INT NOT NULL,
-    emissao DATE NOT NULL,
-    vencimento DATE NOT NULL,
-    previsao_faturamento DATE,
-    aprovacao_cliente BOOLEAN,
-    hora_aprovacao TIME,
-    embarques INT,
-    prazo_entrega INT, -- Prazo de entrega em dias
-    n_pedido_compras VARCHAR(50),
-    vendedor VARCHAR(100),
-    historico TEXT,
-    faturamento DECIMAL(10, 2),
-    docto VARCHAR(50)
+cor_favorita varchar(100),
+idnotafiscal int,
+foreign key (idnotafiscal) references notafiscal(idnotafiscal),
+foreign key (idsexo) references sexo(idsexo),
+foreign key (id_cadcli) references cadcli(id_cadcli)
 );
 
 
@@ -122,7 +126,7 @@ VALUES (
 );
 
 INSERT INTO sexo (tipo)
-VALUES ('Masculino');
+VALUES ('Masculino', 'Feminino', 'Não se Aplique');
 
 
 INSERT INTO notafiscal (
@@ -135,3 +139,67 @@ VALUES (
     'Nota fiscal referente à compra de materiais', 1500.00, 
     'NF123456789'
 );
+
+UPDATE cadcligeral
+SET 
+    aliquota = 22.5,                                 
+    tabela_preco = 150.00,                           
+    transportadora1 = 'Transportadora Alpha',        
+    transportadora2 = 'Transportadora Beta',         
+    regime_de_tributacao = 'pj',                     
+    nome = 'Carlos Alberto',                         
+    situacao_do_icms = 2,                           
+    insc_estadual = '12345678901234',                
+    email = 'carlos.alberto@example.com',            
+    email_danfe = 'danfe@example.com',               
+    email_de_cobranca = 'cobranca@example.com',      
+    email_loja_virual = 'loja.virtual@example.com',  
+    telefone_comercial = '(11) 91234-5678',          
+    ramal = '123',                                   
+    tel_celular = '(11) 98765-4321',                 
+    fax = '(11) 8765-4321',                          
+    cpf = '12345678901',                            
+    insc_suframa = '123456789012345',                
+    data_nascm = '1980-01-01',                       
+    rg = 'MG1234567',                                
+    linha_do_perfil = 'Novo perfil atualizado',     
+    rua = 'Rua Nova',                                
+    cidade = 'Nova Cidade',                          
+    numero = 456,                                    
+    dataNasc = '1980-01-01',                         
+    titulo_eleitoral = '987654321012',               
+    nivel_de_acesso = 5,                             
+    rede_social = 'facebook.com/carlos',             
+    telefone = '(11) 91234-5678',                    
+    idsexo = 1,                                      
+    tipo_contato = 'Pessoal',                        
+    valor = '1500',                                  
+    descricao = 'Descrição atualizada do cliente',   
+    transportadora1 = 'Transportadora Gamma',        
+    transportadora2 = 'Transportadora Delta',        
+    tipo_transacao = 'Compra',                       
+    comissao = 0.10,                                 
+    categoria = 'Premium',                           
+    datacontracao = '2023-01-01',                    
+    salario = 5000.00,                               
+    data_contracao = '2023-01-01',                   
+    data_transicao = '2023-12-31',                   
+    limite_credito = 15000.00,                       
+    cnpj = '12.345.678/0001-00',                     
+    comida_favorita = 'Sushi',                       
+    foto_perfil = 'foto_nova.jpg',                   
+    gosto_musical = 'Jazz',                          
+    cor_favorita = 'Verde',                          
+    idnotafiscal = 2                                 
+WHERE 
+    id_cadcligeral = 1;       
+    
+select * from transportadora1;
+
+
+
+
+
+
+
+
