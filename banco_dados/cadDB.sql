@@ -4,7 +4,7 @@ USE cadDB;
 -- Criar tabela pecas
 CREATE TABLE pecas (
     idpecas INT AUTO_INCREMENT PRIMARY KEY,
-    descricao TEXT,
+    descricao TEXT not null,
     variante VARCHAR(255),
     ps VARCHAR(10),
     codigo VARCHAR(50),
@@ -18,6 +18,7 @@ CREATE TABLE pecas (
     origem VARCHAR(50),
     status ENUM('ativo', 'não ativo')
 );
+
 
 -- Inserir dados na tabela pecas
 INSERT INTO pecas (
@@ -97,9 +98,9 @@ CREATE TABLE servicos (
     previsao_data DATE,
     descricao TEXT,
     execucao TEXT,
-    nome_peca VARCHAR(255),
+    nome_peca VARCHAR(255) not null,
     variante_peca VARCHAR(255),
-    quantidade DECIMAL(10, 2),
+    quantidade DECIMAL(10, 2) not null,
     valor DECIMAL(10, 2),
     FOREIGN KEY (id_cliente) REFERENCES cadcli(id_cadcli)
 );
