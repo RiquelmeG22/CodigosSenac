@@ -1,15 +1,3 @@
-# import pandas as pd
-# import matplotlib.pyplot as plt
-
-# df = pd.read_csv('eleicao.csv')
-# #df.set_index('Posição', inplace=True)
-
-
-
-# plt.title('Vereadores Eleitos CG')
-
-# data = df.loc(['Nome', 'Votos'])
-# print(len(data))
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -19,12 +7,15 @@ df = pd.read_csv('eleicao.csv')
 
 plt.title('Vereadores Eleitos CG')
 
-data = df.loc[['Nome', 'Voto']]
+data = df.loc[:,['Nome', 'Voto']]
 
 print(len(data))
 
+ep = [0.1 if i != 0 else 0.3 for i in range(len(data))]
 
-plt.barh(data['Nome'], data['Voto'], color='blue')
+plt.pie(data.iloc[:, 1], labels=data.iloc[:, 0], explode=ep,autopct='%.2f%%')
+
+#plt.barh(data['Nome'], data['Voto'], color='blue')
 
 plt.xlabel('Voto')
 plt.ylabel('Vereadores')
