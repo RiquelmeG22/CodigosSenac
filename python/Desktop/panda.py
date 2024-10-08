@@ -28,4 +28,33 @@ df = pd.read_csv('https://raw.githubusercontent.com/datasciencedojo/datasets/mas
 
 #print(df.query('Age >20 & Sex=="male"').head) seleciona todos maior q 20 anos e masculino
 
-df.to_csv('dataset.csv', sep=',' , index=False, encoding='utf-8=sig')
+
+#df.to_csv('dataset.csv', sep=',' , index=False, encoding='utf-8=sig') #pra salvar
+
+# Criança===             ==             ==        == 
+
+#crianca = df.query('Age < 10 & Survived==1')
+#print(crianca.count())
+
+#crianca.to_csv('craincas.cvs', sep=',' , index=False, encoding='utf-8-sig')
+
+#Mulheres
+
+mulheres = df.query('Sex=="female" & Survived==1')
+#print(mulheres[:])
+
+
+mulheres.to_csv('mulheres.csv', sep=',' , index=False, encoding='utf-8-sig')
+
+
+#homens = df.query('Sex=="male" & Survived==1 ' )
+
+#homens.to_csv('homens.csv', sep=',' , index=False, encoding='utf-8-sig')
+
+#idoso = df.query('Age > 50 & Survived==1')
+#idoso.to_csv('idoso.csv', sep=',' , index=False, encoding='utf-8-sig')
+
+#menina = df[(df['Age'] < 12) & (df['Sex'] == "female") & (df['Survived'] == 1)]
+
+
+#menina.to_csv('menina.csv', sep=',', index=False, encoding='utf-8-sig')
