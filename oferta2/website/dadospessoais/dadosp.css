@@ -22,3 +22,9 @@ p {
     font-weight: bold;
     
 }
+
+a {
+    display: flex;
+    justify-content: center;
+    color: black;
+}
