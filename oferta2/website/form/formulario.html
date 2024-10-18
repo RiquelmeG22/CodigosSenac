@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1>Cadastro de Usário</h1>
+    <br>f
+    <p>Nome Completo</p>
+    <p>(67)99634-3030</p>
+    <form action="###">
+        <fieldset>
+            <p>Qual sua linguagem preferida ?</p>
+            <input type="radio" id="html" name="fav_language" value="Html"required checked>
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS" required>
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript" required>
+            <label for="javascript">JavaScript</label>
+            <br><br>
+        </fieldset>
+        <br>
+    </form>
+    <label for="email">Email:</label>
+    <br>
+    <input type="email" id="email", placeholder="exemplo@", maxlength="50", size="20" required>
+    <br><br>
+    <label for="password">Senha:</label><br>
+    <input type="password" id="senha" name="senha" required >
+    <br><br>
+    <label for="tel">Telefone:</label><br>
+    <input type="number" id="telefone" name="senha" placeholder="(xx)(xxxx-xxxx)" required>
+    <br><br>
+    <label for="data">Data de Nascimento:</label><br>
+    <input type="date" name="date" id="DataNascimento=d" size="20" maxlength="10" placeholder="00-00-00">
+    <br><br>
+    <label for="cor">Cor Favorita:</label>
+    <br>
+    <input type="color" name="cor" id="cor">
+    <br><br>
+    <label for="idade">Idade:</label><br>
+    <input type="number" id="idade" name="idade" min="10" max="120">
+    <br><br>
+    <label for="genero">Genero:</label><br>
+    <input type="radio" id="Feminino" name="gen_language" value="Masculino"required checked>
+    <label for="html">Masculino</label><br>
+    <input type="radio" id="Masculino" name="gen_language" value="Feminino" required>
+    <label for="css">Feminino</label><br>
+    <br><br>
+    <label for="time">Escolha seu time favorito:</label><br>
+    <input type="checkbox" id="Flamengo" name="clube_language" value="Flamengo"required checked>
+    <label for="html">Flamengo</label><br>
+    <input type="checkbox" id="Palmeiras" name="clube_language" value="Palmeiras" required>
+    <label for="css">Palmeiras</label><br>
+    <input type="checkbox" id="Corithians" name="clube_language" value="Corithians" required>
+    <label for="javascript">Corithians</label>
+    <br><br>
+    <label for="pais">País de Origem:</label>
+    <select name="pais" id="pais">
+        <option value="brasil">Brasil</option>
+        <option value="eua">Estados Unidos</option>
+        <option value="chile">Chile</option>
+    </select>
+    <br><br>
+    <label for="arquivo">Envie sua foto de perfil:</label><br>
+    <input type="file" name="arquivo" id="arquivo">
+    <br><br>
+    <label for="story">Pesquisar algo:</label><br>
+    <textarea name="story" id="story" cols="10" rows="1" placeholder="Buscar.."></textarea>
+    <br><br>
+    <button type="submit">Cadastrar</button>
+    <button type="reset">Limpar Formulário</button>
+</body>
+</html>
