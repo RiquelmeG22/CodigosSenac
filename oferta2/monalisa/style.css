@@ -1,38 +1,94 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+body{
+    background-color: rgb(139, 236, 240);
 }
 
-.container {
-    display: flexbox; /* Muda para flexbox */
-    justify-content: space-between; /* Espaço igual entre os itens */
-    flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte em telas menores */
-    max-width: 800px;
-    width: 100%;
+p {
+    display: inline-block;
+    text-align: justify;
+    line-height: 1.3;
+    border: 10;
+    height: 300px;
+    margin: 0;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    
 }
 
 .card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    text-align: center;
-    width: 45%; /* Define a largura das cartas */
-    margin-bottom: 20px; /* Espaçamento entre as linhas */
+
+    position: relative;
+    left: 40px;
+    border-radius: 40px;
+    display: inline-block;
+    top: 0;
+    margin-top: 8px;
+    width: 300px;
+    height: 500px;
+   
+
 }
 
-.card img {
-    max-width: 100%;
+
+img {
+    border-radius: 5px;
+    width: 250px;
     height: auto;
-    border-radius: 8px;
+    border-top-left-radius: 20px;
+    border-color: black;
+    
+    
+
+}
+.LarguraCard {
+    width: 300px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 0%, 0%, 10px 10px;
+    border: 2px solid;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
 }
 
-.card p {
-    margin-top: 10px;
-    color: #333;
+/* .M2, p {
+    background-color: blue;
+    color: aqua;
+} */
+
+
+
+.Texto {
+
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 0%, 0%, 10px 10px;
+    border: 2px solid;
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.9);
+    border-color: black;
+
+}
+
+#Primeiro {
+    background-color: blue;
+    color: rgb(174, 255, 244);
+}
+
+
+#Segundo {
+    background-color: rgb(212, 234, 255);
+    color: red;
+}
+
+#Terceiro {
+    background-color: rgb(139, 139, 139);
+    color: green;
+}
+
+#Quarto {
+    background-color: pink;
+    color: greenyellow;
+}
+
+#Quinto {
+    background-color: rgb(80, 0, 0);
+    color: rgb(2, 66, 2);
 }
