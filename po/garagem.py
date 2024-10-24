@@ -28,3 +28,5 @@ class Carro(Veiculo):
 class Moto(Veiculo):
     def empinar(self):
         print("Bololololo")
+
+
