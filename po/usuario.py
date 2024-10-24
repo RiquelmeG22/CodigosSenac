@@ -8,6 +8,7 @@ class Usuario:
 
     def pegar_emprestado(self,livro):
         if len(self.lista_livros) == self.MAX_EMPRESTIMO:
-            return
-
+            return 'Limite de emprestimos antigido!!'
         
+    
+        self.lista_livros.append(livro.nome)
