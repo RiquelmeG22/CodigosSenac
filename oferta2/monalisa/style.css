@@ -2,6 +2,15 @@ body{
     background-color: rgb(139, 236, 240);
 }
 
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+
 p {
     display: inline-block;
     text-align: justify;
@@ -24,7 +33,7 @@ p {
     margin-top: 8px;
     width: 300px;
     height: 500px;
-   
+    
 
 }
 
@@ -35,8 +44,8 @@ img {
     height: auto;
     border-top-left-radius: 20px;
     border-color: black;
-    
-    
+    border-top-right-radius: 20px;
+   
 
 }
 .LarguraCard {
@@ -45,7 +54,7 @@ img {
     border-style: solid;
     border-radius: 0%, 0%, 10px 10px;
     border: 2px solid;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
 
 }
 
