@@ -45,7 +45,7 @@ img {
     border-top-left-radius: 20px;
     border-color: black;
     border-top-right-radius: 20px;
-   
+
 
 }
 .LarguraCard {
@@ -55,6 +55,7 @@ img {
     border-radius: 0%, 0%, 10px 10px;
     border: 2px solid;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+
 
 }
 
