@@ -1,11 +1,11 @@
 body {
     background-color: white;
-    background-image: url('nasa-image.jpg');
-    background-size: 104%;
+    background-size: 100% 100%;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     box-sizing: border-box;
-
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -47,35 +47,3 @@ header {
     height: auto;  
 }
 
-section {
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-    height: 50%;
-   
-}
-
-
-.conteudo {
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-h1 {
-    display: block;
-    color: white;
-    font-size: 100px;
-    margin: 10%;
-
-}
-
-p {
-    
-    color: white;
-    max-width: 800px;
-    margin: 10%;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-   
-   
-}
