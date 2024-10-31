@@ -11,4 +11,4 @@ class Usuario:
             return 'Limite de emprestimos antigido!!'
         
     
-        self.lista_livros.append(livro.nome)
+        self.lista_livros.append(livro.titulo)
