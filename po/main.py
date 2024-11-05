@@ -42,3 +42,5 @@ monica = Livros('Almancao da turma da monica', 'Mauricio de Souza','525', 4)
 
 rafaela.pegar_emprestado(dom_carrasco)
 print(vars(rafaela))  
+
+
