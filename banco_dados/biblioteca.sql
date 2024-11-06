@@ -31,4 +31,15 @@ CREATE TABLE emprestimo (
 );
 
 
-SELECT * FROM livro;
+INSERT INTO livro (titulo, autor, genero, status, codigo) VALUES
+('O Alquimista', 'Paulo Coelho', 'Aventura', 'disponível', 101),
+('1984', 'George Orwell', 'Ficção científica', 'emprestado', 102),
+('Dom Casmurro', 'Machado de Assis', 'Literatura Brasileira', 'disponível', 103),
+('O Senhor dos Anéis', 'J.R.R. Tolkien', 'Fantasia', 'reservado', 104);
+
+INSERT INTO usuario (nome, cpf, telefone) VALUES
+('João Silva', '12345678901', '987654321'),
+('Maria Oliveira', '10987654321', '912345678'),
+('Pedro Costa', '11223344556', '998877665'),
+('Ana Pereira', '22334455667', '997788889');
+
