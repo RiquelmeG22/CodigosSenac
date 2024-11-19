@@ -9,7 +9,7 @@ CREATE TABLE usuario (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,  
     nome VARCHAR(100),                          
     cpf VARCHAR(13),                            
-    telefone VARCHAR(20)                        
+    telefone VARCHAR(20)                    
 );
 
 
@@ -19,7 +19,7 @@ CREATE TABLE livro (
     autor VARCHAR(50),                          
     genero VARCHAR(50),                         
     status VARCHAR(50),                         
-    codigo INT                                  
+    isbn VARCHAR(50)                                  
 );
 
 CREATE TABLE emprestimo (
