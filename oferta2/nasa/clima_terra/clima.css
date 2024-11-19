@@ -1,0 +1,33 @@
+body { background-image: url('../img/clima_terra.jpg');
+
+}
+
+
+
+h1 {
+
+    margin-bottom: 0;
+    font-size: 850%;
+    margin: 0px;
+    text-align: center;
+    padding-right: 200px;
+    color: white;
+    padding: 50px;
+    padding-right: 300px;
+}
+
+
+
+p {
+    
+    font-size: 25px;
+    width: 1000px;
+    color: black;
+    height: 400px;
+    text-align: center;
+    padding-left: 650px;
+    text-align: justify;
+    color: white;
+    margin: 0;
+    padding-top: 80px;
+}
