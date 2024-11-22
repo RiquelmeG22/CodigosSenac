@@ -32,7 +32,7 @@ class Livros():
     def excluirLivro(self):
         return 'delete from usuario where id_usuario = 1;'
     
-    def 
+   
 
 
     # def deleteQuery(self):
