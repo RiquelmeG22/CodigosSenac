@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+   
+    <style>
+        .span{
+            display: none;
+            font-size: 12;
+            border: 12px black;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Digite o número do processo" class="input-required" oninput="processoValidade()">
+        <span class="span-required">Exemplo 3132337-43.5667
+        </span>
+
+        <input type="text" placeholder="####" class="input-required" oninput="processoValidade2()">
+        <span class="span-required">exemplo 0000</span>
+    </div>
+
+    <script>
+        const inputs = document.querySelectorAll('.input-required')
+        const span = document.querySelectorAll('.span-required')
+        const tribunal = /^\d{7}\-\d{2}\.\d{4}$/;
+        const final = /^\d{4}$/;
+
+        // document.write(tribunal.test('232323-23.4444'))
+        // document.write(final.test('2323'))
+
+        function processoValidade(){
+            console.log(inputs[0].value);
+            if(tribunal.test(inputs[0].value)) {
+                removeError(0);
+            }else {
+                setError(0)
+            }
+        } 
+
+        function processoValidade2(){
+            console.log(final.test[inputs[1].value])
+
+            if(final.test(inputs[1].value)){
+                removeError(1);
+            }else {
+                setError(1);
+            }
+        }
+
+        function setError(index){
+            
+            span[index].style.display = 'block';
+            span[index].style.color = 'red';
+        }
+            
+        function removeError(index) {
+            span[index].style.display = 'none';
+        }
+    </script>
+    
+</body>
+</html>
