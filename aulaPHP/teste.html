@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="GET" action="action.php">
+        <fieldset id="pessoal">
+            <legend>Dados Pessoais</legend>
+
+            <p>Nome</p>
+            <input type="text" name="nome" id="nome" size="20" maxlength="20" placeholder="Digite seu nome">
+            
+            <p>CPF</p>
+            <input type="text" name="cpf" id="cpf-form" size="20" maxlength="20" placeholder="Digite seu Cpf">
+
+            
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+
+
+    <form method="GET" action="action.php">
+        <b>Qual é seu sistema operacioanal ?</b>
+
+        <input type="radio" name="sistema" value="windows98">Win 98
+
+        <input type="radio" name="sistema" value="windowsXP">Win XP
+
+        <input type="radio" name="sistema" value="Outros" checked>Outros
+
+        <input type=submit>
+    </form>
+
+    <form  method="GET" action="action.php">
+
+        <b>Qual é o melhor professor ?</b>
+        <input type="checkbox" id="ederson" name="prof[]" value="Ederson" checked>
+
+        <label for="ederson">Ederson</label>
+
+        <input type="checkbox" id="horns" name="prof[]" value="Ederson Costa" />
+
+        <label for="Ederson Costa">Ederson Costa</label>
+
+        <input type="submit">
+
+    </form>
+</form>
+
+    <p>Olá Bm dia </p>
+
+
+</body>
+</html>

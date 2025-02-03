@@ -1,0 +1,29 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    border-radius: 100px;
+    height: 140px;
+    height: 140px;
+}
+
+p {
+    border: 15px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+a {
+    display: flex;
+    justify-content: center;
+    color: black;
+}
