@@ -1,104 +1,141 @@
 import React, { useState } from 'react';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import NewWindow from './NewWindow';
 
-export default function App() {
- 
-  const [heartColor, setHeartColor] = useState('gray');
-  const [senha, setSenha] = useState('');
 
-  const [inputValue, setInputValue] = useState('');
+const Stack = createStackNavigator();
 
-  const toggleHeartColor = () => {
-    setHeartColor(heartColor === 'red' ? 'gray' : 'red');
-  };
 
+ function MainScreen({ navigation }) {
+  const [heartColor, setHeartColor] = useState('green');
+  const [backgroundColor, setBackgroundColor] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [secure, setSecure] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const showAlert = () => {
-    try {
-      alert(`Valor digitado: ${inputValue}`);
-    } catch (error) {
-      console.error("Erro no show alert: " + error);
+    if (!username.trim() || !password.trim()) {
+      alert('Preencha todos os campos antes de continuar.');
+      return;
+    }
+  
+    if (username === 'admin' && password === 'admin') {
+      setLoggedIn(true);
+      alert(`Login efetuado com sucesso!`);
+      navigation.navigate('NewWindow');
+    } else {
+      alert('Usuário ou senha inválido.');
+      setLoggedIn(false);
     }
   };
+  
 
   return (
-    <View style={styles.container}>
-      <View style={styles.box}>
+    <View style={[styles.container, { backgroundColor }]}>
+      {/* Renderiza a imagem somente se logado */}
+      {loggedIn && (
+        <Image
+          source={{ uri: 'https://github.com/RiquelmeG22.png' }}
+          style={styles.image}
+        />
+      )}
 
-      <Image
-        source={{ uri: 'https://github.com/riquelmeG22.png' }}
-        style={styles.image} />
-      
-      <Text>Riquelme</Text>
+      <Text style={styles.text}>LOGIN</Text>
 
       <TextInput
         style={styles.input}
-        placeholder="Login .."
-        value={inputValue} 
-        onChangeText={(text) => setInputValue(text)} 
+        placeholder="Username"
+        onChangeText={text => setUsername(text)}
+        value={username}
       />
 
-      <TextInput 
-        style={styles.input}
-        placeholder="Senha .."
-        value={senha} 
-        onChangeText={(text) => setSenha(text)} 
-        secureTextEntry={true}
-      />
-
-    
-      <TouchableOpacity onPress={toggleHeartColor}>
-        <AntDesign name="heart" size={24} color={heartColor} />
-      </TouchableOpacity>
+      <View style={styles.passwordContainer}>
+        <TextInput
+          style={styles.inputPassword}
+          placeholder="Senha"
+          secureTextEntry={secure}
+          onChangeText={text => setPassword(text)}
+          value={password}
+        />
+        <TouchableOpacity onPress={() => setSecure(!secure)}>
+          <AntDesign name={secure ? 'eyeo' : 'eye'} size={24} color="gray" />
+        </TouchableOpacity>
+      </View>
 
       <TouchableOpacity onPress={showAlert} style={styles.customButton}>
         <Text style={styles.buttonText}>Clique aqui</Text>
       </TouchableOpacity>
+    </View>
+  );
+}
 
-    </View>
-    </View>
+export default function App() {
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName = "Main">
+        <Stack.Screen name="Main" component={MainScreen} options={{ title: 'Tela Principal'}}/>
+        <Stack.Screen name="NewWindow" component={NewWindow} options={{ title: 'NewWindow'}}/>
+
+      </Stack.Navigator>
+    </NavigationContainer>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    borderWidth: 2,          
-    borderColor: '#4CAF50', 
-    borderRadius: 10,        
-    padding: 80,             
     alignItems: 'center',
+    padding: 20,
   },
-
   image: {
-    width: 100,
-    height: 100,
-    marginBottom: 20, 
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+    marginBottom: 20,
   },
-  customButton: {
-    backgroundColor: "green",
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 8,
-    marginTop: 20, 
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: '600',
+  text: {
+    fontSize: 30,
+    marginVertical: 10,
   },
   input: {
-    width: '100%', 
+    width: '40%',
     height: 40,
     borderWidth: 1,
     borderRadius: 5,
-    marginBottom: 20, 
+    marginVertical: 10,
     paddingHorizontal: 10,
+    backgroundColor: '#fff'
+  },
+  passwordContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '40%',
+    borderWidth: 1,
+    borderRadius: 5,
+    backgroundColor: '#fff',
+    paddingHorizontal: 10,
+    marginVertical: 10,
+  },
+  inputPassword: {
+    flex: 1,
+    height: 40,
+  },
+  customButton: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: '#1E90FF',
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
   }
 });
+
